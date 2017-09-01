@@ -46,11 +46,11 @@ controller.hears(['request tv show\ (.+?)$'], 'direct_message,direct_mention', f
               'thumb_url': 'http://thetvdb.com/banners/' + `${shows[element].banner}`,
               'footer': 'TVDB ID: ' + `${shows[element].id}`,
               'footer_icon': 'http://i.imgur.com/vJFzNCm.png',
-              'color': '#7CD197',
+              'color': '#F88017',
               'callback_id': shows[element].id, // + person
               actions: [
                 {
-                  'name': 'request',
+                  'name': 'request_show',
                   'text': 'Request It!',
                   'value': 'request_show',
                   'style': 'primary',
@@ -98,7 +98,9 @@ controller.on('interactive_message_callback', function(bot, trigger) {
 
             reply.attachments.push(
                 {
-                    text: 'Requested!',
+                    title: 'Requested!',
+                    text: 'You can check the status in Ombi',
+                    color: '#7CD197'
                   
                 }
             );
@@ -106,7 +108,7 @@ controller.on('interactive_message_callback', function(bot, trigger) {
             bot.replyInteractive(trigger, reply);
 
             controller.receiveMessage(bot, message);
-            console.log(reply);
+            console.log(message);
             return false; // do not bubble event
         }
 

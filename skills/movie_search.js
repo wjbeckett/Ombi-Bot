@@ -49,15 +49,15 @@ module.exports = function(controller) {
               'text': `${movies.results[element].overview}`,
               'image_url': 'https://image.tmdb.org/t/p/original' + `${movies.results[element].poster_path}`,
               'thumb_url': 'https://image.tmdb.org/t/p/original' + `${movies.results[element].poster_path}`,
-              'color': '#7CD197',
+              'color': '#F88017',
               'footer': 'TMDB ID: ' + `${movies.results[element].id}`,
               'footer_icon': 'https://pbs.twimg.com/profile_images/789117657714831361/zGfknUu8.jpg',
               'callback_id': movies.results[element].id, // + person
               actions: [
                 {
-                  'name': 'request',
+                  'name': 'request_movie',
                   'text': 'Request!',
-                  'value': 'request',
+                  'value': 'request_movie',
                   'style': 'primary',
                   'type' : 'button',
                 }
@@ -72,6 +72,49 @@ module.exports = function(controller) {
     })
 
   });
+  
+  
+// Button actions
+controller.on('interactive_message_callback', function(bot, trigger) {
+
+
+        if (trigger.actions[0].name.match(/^request_movie/)) {
+
+            var message = {
+                user: trigger.user,
+                channel: trigger.channel,
+                text: '<@' + bot.identity.id + '> ' + trigger.actions[0].value,
+                type: 'message',
+            };
+
+            var reply = trigger.original_message;
+
+            for (var a = 0; a < reply.attachments.length; a++) {
+                reply.attachments[a].actions = null;
+            }
+
+            var person = '<@' + trigger.user.id + '>';
+            if (message.channel[0] == 'D') {
+                person = 'You';
+            }
+
+            reply.attachments.push(
+                {
+                    title: 'Requested!',
+                    text: 'You can check the status in Ombi',
+                    color: '#7CD197'
+                  
+                }
+            );
+
+            bot.replyInteractive(trigger, reply);
+
+            controller.receiveMessage(bot, message);
+            console.log(message);
+            return false; // do not bubble event
+        }
+
+    }); 
 
 };
 
