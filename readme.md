@@ -48,7 +48,7 @@ Launch your bot application by typing:
 
 `node .`
 
-Now, visit your new bot's login page: http://localhost:3000/login
+Now, visit your new bot's login page: http://bot-url/login
 
 #### Usage
 Once the bot is in your slack team you can either direct messge the bot or invite it to a channel and mention it to initiate searches
