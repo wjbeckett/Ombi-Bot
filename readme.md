@@ -36,3 +36,17 @@ Launch your bot application by typing:
 `node .`
 
 Now, visit your new bot's login page: http://localhost:3000/login
+
+#### Usage
+Once the bot is in your slack team you can either direct messge the bot or invite it to a channel and mention it to initiate searches
+
+##### To search for a movie:
+`@ombi request movie Shrek the Third`
+This command will search TMDB.org for any movies relating to "Shrek the Third" and return their results as pre formatted messages
+![Movie Search](wjbeckett.github.com/ombi-bot/github_img/movie_search.jpg)
+
+##### To search for a TV Show:
+`@ombi request tv show Suits`
+Much the same as the mvoie search this will return results from theTVDB.com relating to the search term "Suits"
+![TV Search](wjbeckett.github.com/ombi-bot/github_img/tv_search.jpg)
+
