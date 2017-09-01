@@ -44,10 +44,12 @@ Once the bot is in your slack team you can either direct messge the bot or invit
 `@ombi request movie Shrek the Third`
 This command will search TMDB.org for any movies relating to "Shrek the Third" and return their results as pre formatted messages
 <br />
+<br />
 ![Movie Search](https://raw.githubusercontent.com/wjbeckett/Ombi-bot/master/github_img/movie_search.png)
 
 ##### To search for a TV Show:
 `@ombi request tv show Suits`
 Much the same as the mvoie search this will return results from theTVDB.com relating to the search term "Suits"
+<br />
 <br />
 ![TV Search](https://raw.githubusercontent.com/wjbeckett/Ombi-bot/master/github_img/tv_search.png)
