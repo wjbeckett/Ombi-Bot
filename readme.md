@@ -19,6 +19,23 @@ Install dependencies, including [Botkit](https://github.com/howdyai/botkit):
 cd botkit-starter-slack
 npm install
 ```
+You also need to create a .evn file at the root of the bot to store your keys
+
+##### Required modules
+```
+npm install --save moviedb
+npm install --save node-tvdb
+```
+You will need api keys for both TMDB and TVDB. These should be stored in your .env file similar to the below.
+
+```
+clientId=(Slack Client ID)
+clientSecret= (Slack Client Secret)
+PORT=(bot port - default is 3000)
+DASHBOT_API_KEY=(if you want to use dashbot)
+TMDB_API_KEY=(TMDB key)
+TVDB_API_KEY=(TVDB key)
+```
 
 #### Set up your Slack Application
 Once you have setup your Botkit development enviroment, the next thing you will want to do is set up a new Slack application via the [Slack developer portal](https://api.slack.com/). This is a multi-step process, but only takes a few minutes.
