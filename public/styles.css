@@ -1,0 +1,43 @@
+html, body {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    font-family: 'helvetica', sans-serif;
+    font-size: 18px;
+}
+
+a {
+    color: #0741DD;
+}
+
+.button {
+    display: block;
+}
+
+.wrapper div {
+    text-align: center;
+}
+
+.wrapper {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    min-height: auto;
+    overflow-y: hidden;
+    background: url(https://ombi.io/img/bg-pattern.png),#df691a;
+    background: url(https://ombi.io/img/bg-pattern.png),-webkit-linear-gradient(to left,#df691a,#ff2300);
+    background: url(https://ombi.io/img/bg-pattern.png),linear-gradient(to left,#df691a,#ff2300);
+    color: white;
+}
+
+.ombi a {
+  position: absolute;
+  top: 30px;
+  left: 60px;
+  font-size: 25px;
+  text-decoration: none;
+  color: white;
+}
