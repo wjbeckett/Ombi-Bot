@@ -1,5 +1,8 @@
 # Ombi bot for Slack!
 
+[![Build Status](https://travis-ci.org/wjbeckett/Ombi-bot.svg?branch=master)](https://travis-ci.org/wjbeckett/Ombi-bot)
+
+
 This repo contains everything you need to run a Slack bot with [Botkit](https://botkit.ai) which integrates with Ombi.
 
 Our goal with this bot is to make interfacing with Ombi easier and all from one console!
