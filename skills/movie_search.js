@@ -44,14 +44,14 @@ module.exports = function(controller) {
           //'username': 'Ombi',
           'attachments': [
             {
-              'author_name': 'TMDB ID: ' + `${movies.results[element].id}`,
-              'author_link': 'https://themoviedb.org/movie/' + `${movies.results[element].id}`,
-              'author_icon': 'https://pbs.twimg.com/profile_images/789117657714831361/zGfknUu8.jpg',
               'title': `${movies.results[element].title} (${release_year})`,
+              'title_link': 'https://themoviedb.org/movie/' + `${movies.results[element].id}`,
               'text': `${movies.results[element].overview}`,
-              //'image_url': 'https://image.tmdb.org/t/p/original' + `${movies.results[element].poster_path}`,
+              'image_url': 'https://image.tmdb.org/t/p/original' + `${movies.results[element].poster_path}`,
               'thumb_url': 'https://image.tmdb.org/t/p/original' + `${movies.results[element].poster_path}`,
               'color': '#7CD197',
+              'footer': 'TMDB ID: ' + `${movies.results[element].id}`,
+              'footer_icon': 'https://pbs.twimg.com/profile_images/789117657714831361/zGfknUu8.jpg',
               'callback_id': movies.results[element].id, // + person
               actions: [
                 {
