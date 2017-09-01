@@ -16,10 +16,10 @@ Clone this repository using Git:
 Install dependencies, including [Botkit](https://github.com/howdyai/botkit):
 
 ```
-cd botkit-starter-slack
+cd ombi-bot
 npm install
 ```
-You also need to create a .evn file at the root of the bot to store your keys
+You also need to create a .env file at the root of the bot to store your keys
 
 ##### Required modules
 ```
@@ -41,10 +41,6 @@ TVDB_API_KEY=(TVDB key)
 Once you have setup your Botkit development enviroment, the next thing you will want to do is set up a new Slack application via the [Slack developer portal](https://api.slack.com/). This is a multi-step process, but only takes a few minutes.
 
 * [Read this step-by-step guide](https://github.com/howdyai/botkit/blob/master/docs/slack-events-api.md) to make sure everything is set up.
-
-* We also have this [handy video walkthrough](https://youtu.be/us2zdf0vRz0) for setting up this project with Glitch.
-
-Next, get a Botkit Studio token [from your Botkit developer account](https://studio.botkit.ai/) if you have decided to use Studio.
 
 Update the `.env` file with your newly acquired tokens.
 
